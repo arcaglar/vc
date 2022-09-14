@@ -1,0 +1,7 @@
+@import "./reset.css";
+@import "./_header.css";
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
