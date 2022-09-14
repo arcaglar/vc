@@ -1,6 +1,11 @@
 @import "./reset.css";
 @import "./_header.css";
 @import "./_tab-bar.css";
+@import "./_card.css";
+
+html, body {
+    background-color: #eee;
+}
 
 .container {
     width: 80%;

@@ -1,6 +1,11 @@
 <template>
   <div class="container">
     <Tab :data="categories" />
+    <ul class="product-list">
+      <li class="product-list__item" v-for="item in products">
+        <Card :item="item" />
+      </li>
+    </ul>
     <!-- <p v-if="$fetchState.pending">Fetching posts...</p>
     <p v-else-if="$fetchState.error">Error while fetching posts: {{ $fetchState.error.message }}</p>
     <div v-else>
@@ -12,11 +17,13 @@
 
 <script>
 import Tab from '@/components/Tab'
+import Card from '@/components/Card'
 
 export default {
   name: 'IndexPage',
   components: {
-    Tab
+    Tab,
+    Card
   },
   data () {
     return {
