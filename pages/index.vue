@@ -2,7 +2,7 @@
   <div class="container">
     <Tab :data="categories" />
     <ul class="product-list">
-      <li class="product-list__item" v-for="item in products">
+      <li class="product-list__item" v-for="item in filteringData">
         <Card :item="item" />
       </li>
     </ul>
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import Tab from '@/components/Tab'
 import Card from '@/components/Card'
 
@@ -29,6 +30,18 @@ export default {
     return {
       products: [],
       categories: []
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'getCategory'
+    ]),
+    filteringData() {
+      if (this.getCategory !== '') {
+        return this.products.filter(product => product.category === this.getCategory)
+      } else {
+        return this.products
+      }
     }
   },
   async fetch () {

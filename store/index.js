@@ -1,5 +1,5 @@
 export const state = () => ({
-    selectedCategory: 'jewelery'
+    selectedCategory: ''
 })
 
 export const getters = {
