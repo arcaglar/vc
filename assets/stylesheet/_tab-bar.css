@@ -5,3 +5,16 @@
     justify-content: space-around;
     margin-top: 22px;
 }
+.tab-bar__item {
+    text-transform: capitalize;
+    color: #999;
+    cursor: pointer;
+}
+
+.tab-bar__item--active {
+    color: #000;
+}
+
+.tab-bar__item:hover {
+    color: #666;
+}
