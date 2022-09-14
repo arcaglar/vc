@@ -10,14 +10,17 @@ export const getters = {
 
 export const actions = {
     setCategory (context, payload) {
-        console.log(payload)
         context.commit('setCategory', payload)
     }
 }
 
 export const mutations = {
     setCategory (state, payload) {
-        state.selectedCategory = payload
+        if (payload === state.selectedCategory) {
+            state.selectedCategory = ''
+        } else {
+            state.selectedCategory = payload
+        }
     }
 }
 
