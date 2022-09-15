@@ -30,26 +30,31 @@ export default {
   },
   data () {
     return {
-      products: [],
       categories: []
     }
   },
   computed: {
     ...mapGetters([
-      'getCategory'
+      'getCategory',
+      'getProducts'
     ]),
     filteringData() {
       if (this.getCategory !== '') {
-        return this.products.filter(product => product.category === this.getCategory)
+        return this.getProducts.filter(product => product.category === this.getCategory)
       } else {
-        return this.products
+        return this.getProducts
       }
     }
+  },
+  methods: {
+    ...mapActions([
+      'setProducts'
+    ])
   },
   async fetch () {
     await this.$axios.get('/api/products')
       .then(response => {
-        this.products = response.data
+        this.setProducts(response.data)
       })
     await this.$axios.get('/api/products/categories')
       .then(response => {
