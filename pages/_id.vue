@@ -7,6 +7,9 @@
         <div class="content-wrapper">
           <h1 class="content-wrapper__title">{{ data.title }}</h1>
           <h1 class="content-wrapper__description">${{ data.price }}</h1>
+          <div style="float: left; margin-top: 12px">
+            <Counter/>
+          </div>
         </div>
       </div>
     </div>
@@ -14,6 +17,7 @@
   
   <script>
   import { mapGetters, mapActions } from 'vuex'
+  import Counter from '@/components/Counter'
 
   export default {
     name: 'Detail',
@@ -24,6 +28,9 @@
     },
     props: {
       item: Object
+    },
+    components: {
+      Counter
     },
     computed: {
       ...mapGetters([

@@ -1,0 +1,22 @@
+.counter {
+    float: left;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.counter__increment, .counter__decrement {
+    float: left;
+    padding: 4px 10px;
+}
+
+.counter__increment:hover, .counter__decrement:hover {
+    background-color: #eee;
+}
+
+.counter__value {
+    float: left;
+    padding: 4px 10px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
