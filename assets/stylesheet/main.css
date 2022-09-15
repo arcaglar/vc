@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700&display=swap');
+
 @import "./reset.css";
+@import "./detail.css";
+
 @import "./_header.css";
 @import "./_tab-bar.css";
 @import "./_card.css";
+
 
 html, body {
     background-color: #eee;
@@ -12,4 +16,12 @@ html, body {
 .container {
     width: 80%;
     margin: 0 auto;
+}
+
+.wrapper {
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    padding: 22px;
+    border-radius: 6px;
 }

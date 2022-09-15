@@ -1,0 +1,31 @@
+.image-wrapper {
+    width: 20%;
+    float: left;
+}
+
+.image-wrapper__item {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.content-wrapper {
+    width: 80%;
+    float: left;
+    padding-left: 32px;
+}
+
+.content-wrapper__title {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+}
+
+.content-wrapper__description {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    margin-top: 12px;
+}
