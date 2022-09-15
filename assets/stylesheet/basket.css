@@ -1,0 +1,25 @@
+.basket-card {
+    width: 100%;
+    float: left;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+.basket-card__image {
+    width: 60px;
+    float: left;
+}
+
+.basket-card__content {
+    width: 80%;
+    float: left;
+}
+
+.basket-card__description {
+    width: 60%;
+    float: left;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+}

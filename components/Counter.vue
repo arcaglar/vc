@@ -10,9 +10,17 @@
   export default {
     name: 'Counter',
     data () {
-        return {
-            value: 0
-        }
+      return {
+        value: 0
+      }
+    },
+    props: {
+      count: Number
+    },
+    mounted() {
+      if (this.count) {
+        this.value = this.count
+      }
     }
   }
 </script>
