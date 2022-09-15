@@ -23,6 +23,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 12px;
+    border: 3px solid #2ecc7159;
+    transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card:hover {
+    border-color: #2ecc71;
 }
 .card__image {
     height: 50%;

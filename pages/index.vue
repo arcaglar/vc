@@ -8,12 +8,6 @@
         </NuxtLink>
       </li>
     </ul>
-    <!-- <p v-if="$fetchState.pending">Fetching posts...</p>
-    <p v-else-if="$fetchState.error">Error while fetching posts: {{ $fetchState.error.message }}</p>
-    <div v-else>
-      <pre> {{ categories }} </pre>
-      <pre> {{ products }} </pre>
-    </div> -->
   </div>
 </template>
 
