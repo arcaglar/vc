@@ -13,6 +13,13 @@ export const getters = {
     },
     getBasket(state) {
         return state.basket
+    },
+    totalAmount(state) {
+        let amount = 0
+        state.basket.forEach(item => {
+            amount = amount + (item.price * item.count)
+        });
+        return amount
     }
 }
 

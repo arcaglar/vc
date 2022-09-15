@@ -29,6 +29,12 @@
             </div>
           </li>
         </ul>
+        <div class="checkout-wrapper">
+          <div class="checkout">
+            <span class="checkout__text">Go to Checkout</span>
+            <span class="checkout__total">${{ totalAmount }}</span>
+          </div>
+        </div>
       </div>
     </div>
 </template>
@@ -44,7 +50,8 @@
     },
     computed: {
       ...mapGetters([
-        'getBasket'
+        'getBasket',
+        'totalAmount'
       ])
     },
     methods: {
