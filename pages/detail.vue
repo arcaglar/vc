@@ -10,6 +10,9 @@
           <div style="float: left; margin-top: 12px">
             <Counter/>
           </div>
+          <div style="float: left; width: 100%; margin-top: 12px">
+            <button class="basket-button" @click="addBasket(item)">Add to Cart</button>
+          </div>
         </div>
       </div>
     </div>
@@ -37,6 +40,15 @@
         'getProducts'
       ]),
     },
+    methods: {
+    ...mapActions([
+      'setBasket'
+    ]),
+    addBasket(item) {
+      this.setBasket(item)
+      this.$router.push({ path: '/' })
+    }
+  },
     mounted () {
       this.data = this.getProducts.filter(product => product.id == this.$route.query.id)[0]
     }

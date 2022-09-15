@@ -1,6 +1,7 @@
 export const state = () => ({
     selectedCategory: '',
-    products: []
+    products: [],
+    basket: []
 })
 
 export const getters = {
@@ -9,6 +10,9 @@ export const getters = {
     },
     getProducts(state) {
         return state.products
+    },
+    getBasket(state) {
+        return state.basket
     }
 }
 
@@ -18,6 +22,9 @@ export const actions = {
     },
     setProducts (context, payload) {
         context.commit('SET_PRODUCTS', payload)
+    },
+    setBasket (context, payload) {
+        context.commit('SET_BASKET', payload)
     }
 }
 
@@ -31,6 +38,9 @@ export const mutations = {
     },
     SET_PRODUCTS (state, payload) {
         state.products = payload
+    },
+    SET_BASKET (state, payload) {
+        state.basket.push(payload)
     }
 }
 

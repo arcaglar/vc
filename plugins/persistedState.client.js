@@ -3,6 +3,6 @@ import createPersistedState from 'vuex-persistedstate'
 export default ({ store }) => {
   createPersistedState({
     key: 'vuex',
-    paths: ['products'],
+    paths: ['products', 'basket'],
   })(store)
 }

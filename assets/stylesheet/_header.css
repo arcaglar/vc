@@ -5,6 +5,21 @@
     align-items: center;
 }
 
+.header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .header__logo {
     width: 60px;
+}
+
+.header__basket {
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    cursor: pointer;
 }

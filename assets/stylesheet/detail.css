@@ -29,3 +29,11 @@
     font-size: 18px;
     margin-top: 12px;
 }
+
+.basket-button {
+    padding: 12px 20px;
+    background-color: #2ecc71;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
