@@ -53,7 +53,7 @@ export default {
       'setProducts'
     ])
   },
-  async fetch () {
+  async created () {
     await this.$axios.get('/api/products')
       .then(response => {
         this.setProducts(response.data)
