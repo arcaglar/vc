@@ -1,8 +1,8 @@
 <template>
     <div class="counter">
-        <button class="counter__decrement" @click="value--">-</button>
+        <button class="counter__decrement" :disabled="disabled" @click="changeValue(false)">-</button>
         <span class="counter__value">{{ value }}</span>
-        <button class="counter__increment" @click="value++">+</button>
+        <button class="counter__increment" :disabled="disabled" @click="changeValue(true)">+</button>
     </div>
 </template>
 
@@ -11,11 +11,22 @@
     name: 'Counter',
     data () {
       return {
-        value: 0
+        value: 1
       }
     },
     props: {
-      count: Number
+      count: Number,
+      disabled: Boolean
+    },
+    methods: {
+      changeValue(isIncrement) {
+        if (isIncrement) {
+          this.value++
+        } else {
+          this.value--
+        }
+        this.$emit("counter", this.value)
+      }
     },
     mounted() {
       if (this.count) {

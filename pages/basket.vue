@@ -10,7 +10,7 @@
                 <span class="basket-card__description">{{ item.category }}</span>
                 <span class="basket-card__description">{{ item.price }}</span>
                 <span class="basket-card__description">
-                  <Counter :count="parseInt(item.count)" />
+                  <Counter :count="parseInt(item.count)" :disabled="true" />
                 </span>
               </div>
             </div>

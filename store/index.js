@@ -24,7 +24,6 @@ export const actions = {
         context.commit('SET_PRODUCTS', payload)
     },
     setBasket (context, payload) {
-        payload.count = 1
         context.commit('SET_BASKET', payload)
     }
 }

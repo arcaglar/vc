@@ -8,7 +8,7 @@
           <h1 class="content-wrapper__title">{{ data.title }}</h1>
           <h1 class="content-wrapper__description">${{ data.price }}</h1>
           <div style="float: left; margin-top: 12px">
-            <Counter/>
+            <Counter @counter="setCount($event)" />
           </div>
           <div style="float: left; width: 100%; margin-top: 12px">
             <button class="basket-button" @click="addBasket(data)">Add to Cart</button>
@@ -26,7 +26,8 @@
     name: 'Detail',
     data () {
       return {
-        data: {}
+        data: {},
+        count: 1
       }
     },
     props: {
@@ -41,14 +42,18 @@
       ]),
     },
     methods: {
-    ...mapActions([
-      'setBasket'
-    ]),
-    addBasket(item) {
-      this.setBasket(item)
-      this.$router.push({ path: '/' })
-    }
-  },
+      ...mapActions([
+        'setBasket'
+      ]),
+      addBasket(item) {
+        item.count = this.count
+        this.setBasket(item)
+        this.$router.push({ path: '/' })
+      },
+      setCount(val) {
+        this.count = val
+      }
+    },
     mounted () {
       this.data = this.getProducts.filter(product => product.id == this.$route.query.id)[0]
     }
