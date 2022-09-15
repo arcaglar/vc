@@ -9,12 +9,28 @@
     text-transform: capitalize;
     color: #999;
     cursor: pointer;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tab-bar__item--active {
-    color: #000;
+    color: #666;
+    background-color: #ccc;
+    border-color: #666;
 }
 
 .tab-bar__item:hover {
     color: #666;
+}
+
+.close-icon {
+    width: 11px;
+    height: 11px;
+    float: right;
+    margin-left: 6px;
 }
