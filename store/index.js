@@ -14,22 +14,22 @@ export const getters = {
 
 export const actions = {
     setCategory (context, payload) {
-        context.commit('setCategory', payload)
+        context.commit('SET_CATEGORY', payload)
     },
     setProducts (context, payload) {
-        context.commit('setProducts', payload)
+        context.commit('SET_PRODUCTS', payload)
     }
 }
 
 export const mutations = {
-    setCategory (state, payload) {
+    SET_CATEGORY (state, payload) {
         if (payload === state.selectedCategory) {
             state.selectedCategory = ''
         } else {
             state.selectedCategory = payload
         }
     },
-    setProducts (state, payload) {
+    SET_PRODUCTS (state, payload) {
         state.products = payload
     }
 }

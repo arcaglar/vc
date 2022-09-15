@@ -40,8 +40,10 @@ export default {
     ]),
     filteringData() {
       if (this.getCategory !== '') {
+        this.setProducts(this.getProducts.filter(product => product.category === this.getCategory))
         return this.getProducts.filter(product => product.category === this.getCategory)
       } else {
+        this.setProducts(this.getProducts)
         return this.getProducts
       }
     }
