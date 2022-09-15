@@ -25,6 +25,9 @@ export const actions = {
     },
     setBasket (context, payload) {
         context.commit('SET_BASKET', payload)
+    },
+    removeItemOnBasket (context, payload) {
+        context.commit('REMOVE_ITEM', payload)
     }
 }
 
@@ -50,5 +53,12 @@ export const mutations = {
         } else {
             state.basket.push(payload)
         }
+    },
+    REMOVE_ITEM (state, payload) {
+        state.basket.forEach((item, key) => {
+            if (item.id === payload.id) {
+                state.basket.splice(key, 1)
+            }
+        });
     }
 }

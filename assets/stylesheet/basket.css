@@ -5,6 +5,7 @@
     border: 1px solid #ddd;
     border-radius: 6px;
     margin-bottom: 12px;
+    position: relative;
 }
 .basket-card__image {
     width: 60px;
@@ -22,4 +23,13 @@
     padding-left: 22px;
     margin-bottom: 12px;
     text-transform: capitalize;
+}
+
+.basket-card__remove {
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
 }
