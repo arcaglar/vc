@@ -3,7 +3,9 @@
     <Tab :data="categories" />
     <ul class="product-list">
       <li class="product-list__item" v-for="item in filteringData">
-        <Card :item="item" />
+        <NuxtLink to="/detail">
+          <Card :item="item" />
+        </NuxtLink>
       </li>
     </ul>
     <!-- <p v-if="$fetchState.pending">Fetching posts...</p>
