@@ -35,6 +35,10 @@ export default {
   env: {
   },
 
+  generate: {
+    dir: 'public'
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios'
