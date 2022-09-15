@@ -24,6 +24,7 @@ export const actions = {
         context.commit('SET_PRODUCTS', payload)
     },
     setBasket (context, payload) {
+        payload.count = 1
         context.commit('SET_BASKET', payload)
     }
 }
@@ -40,7 +41,15 @@ export const mutations = {
         state.products = payload
     },
     SET_BASKET (state, payload) {
-        state.basket.push(payload)
+        if (state.basket.some(e => e.id === payload.id)) {
+            state.basket.forEach((item, key) => {
+                if (item.id === payload.id) {
+                    payload.count++
+                    state.basket[key].count++
+                }
+            });
+        } else {
+            state.basket.push(payload)
+        }
     }
 }
-

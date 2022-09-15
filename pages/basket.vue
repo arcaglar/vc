@@ -1,13 +1,20 @@
 <template>
     <div class="container">
       <div class="wrapper">
-        basket
+        <pre>{{ getBasket }}</pre>
       </div>
     </div>
 </template>
 
 <script>
+  import { mapGetters, mapActions } from 'vuex'
+
   export default {
-    name: 'Basket'
+    name: 'Basket',
+    computed: {
+      ...mapGetters([
+        'getBasket'
+      ])
+    },
   }
 </script>

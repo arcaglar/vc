@@ -11,7 +11,7 @@
             <Counter/>
           </div>
           <div style="float: left; width: 100%; margin-top: 12px">
-            <button class="basket-button" @click="addBasket(item)">Add to Cart</button>
+            <button class="basket-button" @click="addBasket(data)">Add to Cart</button>
           </div>
         </div>
       </div>
