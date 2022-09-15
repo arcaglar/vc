@@ -7,7 +7,7 @@
   <script>
   
   export default {
-    name: 'IndexPage',
+    name: 'Detail',
     props: {
         item: Object
     }

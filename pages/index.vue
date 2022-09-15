@@ -3,7 +3,7 @@
     <Tab :data="categories" />
     <ul class="product-list">
       <li class="product-list__item" v-for="item in filteringData">
-        <NuxtLink to="/detail">
+        <NuxtLink :to="{ path: '/detail', query: { id: item.id }}">
           <Card :item="item" />
         </NuxtLink>
       </li>
